@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block title %}Shane Jeon{% endblock %}
+{% block head %}
+   <link href="/static/css/basic.css" rel="stylesheet">
+
+{% endblock %}
+  
+<!-- {% block js %}
+
+{% endblock %} -->
+
+
+
+{% block body %}
+   
+    <h2>Shane Jeon</h2>
+    <p>Salutations!</p>
+
+    <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'About Me')">About Me</button>
+    <button class="tablinks" onclick="openCity(event, 'Resume')">Resume</button>
+    <button class="tablinks" onclick="openCity(event, 'Contact')">Contact</button>
+    </div>
+
+    <div id="Home" class="tabcontent">
+    <h3>Home</h3>
+    <p>Home page.</p>
+    </div>
+
+    <div id="Resume" class="tabcontent">
+    <h3>Resume</h3>
+    <img src="/static/img/sjeon_resume_1.28.jpg" alt="Shane Jeon Resume">
+    <!-- <p>resume example <a href="/static/img/sjeon_resume_1.28.jpg"></a></p> -->
+    <!-- <iframe src="/static/img/sjeon_resume_1.28.pdf" width="100%" height="1000px">
+        </iframe> -->
+    </div>
+
+    <div id="Contact" class="tabcontent">
+    <h3>Contact</h3>
+    <p>Contact info.</p>
+    </div>
+
+    <script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+        }
+    </script>
+{% endblock %}
