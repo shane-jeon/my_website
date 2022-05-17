@@ -1,0 +1,7 @@
+__pycache__/
+env/
+.DS_Store
+*.pyc
+secrets.sh
+script.pyc
+MVP.txt
